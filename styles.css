@@ -1,11 +1,105 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: gainsboro;
+  padding: 20px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 canvas {
   width: 800px;
   height: 800px;
-  border: 5px solid black;
+  background-color: white;
+  border-radius: 10px;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.color-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.color-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform ease-in-out 0.3s;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+}
+
+input#color {
+  width: 50px;
+  border: 50%;
+  overflow: hidden;
+  background-color: white;
+}
+
+button,
+label {
+  all: unset;
+  padding: 10px;
+  text-align: center;
+  background-color: rosybrown;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: opacity linear 0.2s;
+}
+
+button:hover,
+label:hover {
+  opacity: 0.5;
+}
+
+input#file {
+  display: none;
+}
+
+input#text {
+  all: unset;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: white;
+}
+
+div#font-select {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  background-color: rosybrown;
+  border-radius: 10px;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
 }

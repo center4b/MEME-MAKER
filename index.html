@@ -8,7 +8,42 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="color-options">
+      <input id="color" type="color" />
+      <div class="color-option" style="background-color: #1abc9c" data-color="#1abc9c"></div>
+      <div class="color-option" style="background-color: #3498db" data-color="#3498db"></div>
+      <div class="color-option" style="background-color: #34495e" data-color="#34495e"></div>
+      <div class="color-option" style="background-color: #27ae60" data-color="#27ae60"></div>
+      <div class="color-option" style="background-color: #8e44ad" data-color="#8e44ad"></div>
+      <div class="color-option" style="background-color: #f1c40f" data-color="#f1c40f"></div>
+      <div class="color-option" style="background-color: #e74c3c" data-color="#e74c3c"></div>
+      <div class="color-option" style="background-color: #95a5a6" data-color="#95a5a6"></div>
+      <div class="color-option" style="background-color: #d35400" data-color="#d35400"></div>
+      <div class="color-option" style="background-color: #2ecc71" data-color="#2ecc71"></div>
+      <div class="color-option" style="background-color: #e67e22" data-color="#e67e22"></div>
+    </div>
     <canvas></canvas>
+    <div class="btns">
+      <input id="line-width" type="range" min="1" max="10" value="5" step="0.5" />
+      <button id="mode-btn">Fill</button>
+      <button id="destroy-btn">Destroy</button>
+      <button id="eraser-btn">Erase</button>
+      <label for="file">
+        <!-- label 의 for 값과 input 의 id값이 동일하면 label을 클릭해도 input과 같은 작동을 함 -->
+        Add Photo
+        <input id="file" type="file" accept="image/*" />
+      </label>
+      <div id="font-select">
+        <span> Font Seletion </span>
+        <select id="font">
+          <option class="font-option" value="NanumGothic">NanumGothic</option>
+          <option class="font-option" value="NotoSans">NotoSans</option>
+        </select>
+        <input type="range" id="font-size" value="50" min="30" max="100" step="5" />
+        <input type="text" placeholder="Add text here..." id="text" />
+      </div>
+      <button id="save">Save Image</button>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
